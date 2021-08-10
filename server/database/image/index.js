@@ -7,6 +7,10 @@ const ImageSchema = new mongoose.Schema({
 
         },
     ],
-});
+},
+{
+    timestamps: true,
+}
+);
 
 const ImageModel = mongoose.model("Images", ImageSchema);

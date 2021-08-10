@@ -6,6 +6,10 @@ const UserSchema = new mangoose.Schema({
     password: {type: String},
     address: [{detail: {type: String}, for: {type: string}}],
     phoneNumber: [{type: number}],
-});
+},
+{
+    timestamps: true,
+}
+);
 
 const UserModel = mongoose.model("Users", UserSchema);
