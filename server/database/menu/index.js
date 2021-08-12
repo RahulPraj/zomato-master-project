@@ -27,4 +27,4 @@ recommended: [
 },
 );
 
-export const MenuModel = mangoose.model("Menu", MenuSchema);
+export const MenuModel = mongoose.model("Menu", MenuSchema);

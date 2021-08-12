@@ -1,6 +1,6 @@
-import  Mongoose  from "mongoose";
+import  mongoose  from "mongoose";
 
-const RestaurantSchema = new Mongoose.Schema({
+const RestaurantSchema = new mongoose.Schema({
     name: {type: String, required: true},
     city: {type: String, reuired:true},
     address: {trpe: String, required: true},
@@ -8,24 +8,24 @@ const RestaurantSchema = new Mongoose.Schema({
     cuisine: [String],
     retaurantTimings: String,
     contactNumber: Number,
-    website: Number,
+    website: String,
     popularSishes: [String],
     averageCost: Number,
     amenties: [String],
     menuImages:{
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Images",
     },
     menu:{
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Menus",
     },
     reviews: [{
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Reviews",
     }],
     photos:{
-        type: Mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId,
         ref: "Images",
     },
 },
@@ -34,4 +34,4 @@ const RestaurantSchema = new Mongoose.Schema({
 }
 );
 
-export const RestaurantModel = Mongoose.model("Restaurants",RestaurantSchema);
+export const RestaurantModel = mongoose.model("Restaurants",RestaurantSchema);

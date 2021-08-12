@@ -1,4 +1,4 @@
-import  Mongoose  from "mongoose";
+import  mongoose  from "mongoose";
 
 const ReviewSchema = mongoose.Schema({
      food:{
@@ -24,4 +24,4 @@ const ReviewSchema = mongoose.Schema({
 }
 );
 
-export const ReviewModel = mongoose.ReviewModel("Reviews", ReviewSchema);
+export const ReviewModel = mongoose.model("Reviews", ReviewSchema);

@@ -1,14 +1,14 @@
-import  Mongoose  from "mongoose";
+import  mongoose  from "mongoose";
 
-const OrderSchema = new Mongoose. Schema({
+const OrderSchema = new mongoose. Schema({
     user: {
-        type:Mongoose.Types.ObjectId,
+        type:mongoose.Types.ObjectId,
         ref: "Users"
     },
     orderDetails: [
         {
             food: {
-                type:Mongoose.Types.ObjectId,
+                type:mongoose.Types.ObjectId,
                 ref: "Foods"
              
             },
@@ -27,9 +27,10 @@ const OrderSchema = new Mongoose. Schema({
         required: true,
     },
 },
+
 {
     timestamps: true,
 }
 );
 
-export const OrderModel = mongoose.OrderModel("Orders", OrderSchema);
+export const OrderModel = mongoose.model("Orders", OrderSchema);
