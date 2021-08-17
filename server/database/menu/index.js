@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-const MenuSchema = new mangoose.MenuSchema({
+const MenuSchema = new mongoose.Schema({
     menus: [
         {
             name: {type: String, required: true},
@@ -27,4 +27,4 @@ recommended: [
 },
 );
 
-export const MenuModel = mongoose.model("Menu", MenuSchema);
+export const MenuModel = mongoose.model("Menus", MenuSchema);
