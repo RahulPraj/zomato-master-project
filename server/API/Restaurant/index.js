@@ -17,7 +17,7 @@ Method   GET
 
 */
 
-Router.get("/",(req, res) => {
+Router.get("/", async(req, res) => {
     try {
         const {city} = req.body;
         const allRestaurants = await RestaurantModel.find ({city});
@@ -41,7 +41,7 @@ Router.get("/:_id", async(req, res) => {
     try{
         
         const { _id } = req.params;
-        const restaurant = await RestaurantModel.findOne{_id};
+        const restaurant = await RestaurantModel.findOne(_id);
         if(!restaurant) 
         return res.status(404).json({error: "Restaurant Not Found"});
         return res.json({restaurant});
