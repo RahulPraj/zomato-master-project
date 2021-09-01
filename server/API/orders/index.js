@@ -16,7 +16,7 @@ Access   public
 Method   GET
 */
 
-Router.get("/:_id", async(req, res) => {
+Router.get("/:_id",passport.authenticate("jwt", {session: false}),async(req, res) => {
     try {
         const {_id} = req.params;
 
