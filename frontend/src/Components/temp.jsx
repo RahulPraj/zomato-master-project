@@ -1,13 +1,9 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
-
-
-export const Temp = () => {
-    return (
-        <div>
-            Hello this is a temp
-        </div>
-    );
+const Temp = () => {
+  const loc = useLocation();
+  return <div>Hello this is a temp component {loc.pathname}</div>;
 };
 
 export default Temp;
